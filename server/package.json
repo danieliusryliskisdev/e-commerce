@@ -7,9 +7,10 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
-  },
+  "dev": "nodemon server.js",
+  "start": "node server.js"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",

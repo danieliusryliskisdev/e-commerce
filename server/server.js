@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://parduotuvele.vercel.app"], // List of allowed origins
+    origin: ["http://localhost:5173", "https://parduotuvele.vercel.app"],
     credentials: true,
   })
 );

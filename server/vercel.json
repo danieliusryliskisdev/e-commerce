@@ -10,17 +10,20 @@
       "use": "@vercel/static"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/index.html"
+    }
+  ],
   "routes": [
     {
-      "src": "(.*)",
-      "dest": "server.js"
+      "src": "/[^.]+$",
+      "dest": "/client/dist/index.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/dist/index.html"
-    },
-    { "src": "/", "dest": "/" },
-    { "src": "/register", "dest": "/" },
-    { "src": "/login", "dest": "/" }
+      "dest": "/client/dist/$1"
+    }
   ]
 }

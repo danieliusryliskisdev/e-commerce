@@ -18,10 +18,6 @@
     {
       "src": "/login",
       "dest": "/"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/dist/index.html"
     }
   ]
 }

@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://parduotuvele.vercel.app"],
+    origin: ["http://localhost:5173", "https://danieliusryliskisdev.github.io"],
     credentials: true,
   })
 );

@@ -1,10 +1,29 @@
 const express = require("express");
-const cors = require("cors"); // Import cors
+const cors = require("cors");
+const connectToDataBase = require("./components/connectToDataBase");
+const cookieParser = require("cookie-parser");
+
+// Routes
+const authRoutes = require("./components/routes/authRoutes");
+
+require("dotenv").config();
+
 const app = express();
+const PORT = process.env.PORT;
 
-app.use(cors()); // Enable CORS
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Replace with your frontend's origin
+    credentials: true, // Allow credentials to be included in requests
+  })
+);
 
-app.get("/", (req, res) => res.send("Express on aaaaa"));
-app.get("/api", (req, res) => res.send("Hello"));
+app.use(express.json());
+app.use(cookieParser());
 
-app.listen(3001, () => console.log("Server ready on port 3001."));
+app.use("/api/auth", authRoutes);
+
+app.listen(PORT, () => {
+  connectToDataBase();
+  console.log(`running on port: ${PORT}`);
+});

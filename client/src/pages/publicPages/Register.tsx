@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from "react";
 import { useRegisterMutation } from "../../redux/api/authApi";
 import { Logout } from "../../components/Logout";
+import { useNavigate } from "react-router-dom";
 
 interface FormData {
   firstName: string;
@@ -10,6 +11,7 @@ interface FormData {
 }
 
 export const Register = () => {
+  const navigate = useNavigate();
   const [register] = useRegisterMutation();
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -30,6 +32,7 @@ export const Register = () => {
       localStorage.setItem("user", JSON.stringify(response));
 
       console.log(response);
+      navigate("/");
     } catch (error) {
       console.error(error);
     }

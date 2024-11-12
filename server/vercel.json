@@ -18,6 +18,9 @@
     {
       "src": "/(.*)",
       "dest": "/client/dist/index.html"
-    }
+    },
+    { "src": "/", "dest": "/" },
+    { "src": "/register", "dest": "/" },
+    { "src": "/login", "dest": "/" }
   ]
 }

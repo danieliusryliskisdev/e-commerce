@@ -47,8 +47,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Sample route to test server functionality
-app.get("/lol", (req, res) => {
-  res.send("lol");
+app.get("/", (req, res) => {
+  res.send("working");
 });
 
 // Authentication routes

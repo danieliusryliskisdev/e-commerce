@@ -18,6 +18,10 @@ app.use(
   })
 );
 
+app.get("/lol", (req, res) => {
+  res.send("lol");
+});
+
 app.use(express.json());
 app.use(cookieParser());
 

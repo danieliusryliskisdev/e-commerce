@@ -1,18 +1,17 @@
 {
-  "dependencies": {
-    "express": "^4.21.1"
-  },
-  "name": "backend",
+  "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "server.js",
   "scripts": {
-  "dev": "nodemon server.js",
-  "start": "node server.js"
-},
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "echo 'No build step needed'"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }

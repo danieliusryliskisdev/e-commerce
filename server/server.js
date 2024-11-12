@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.use("/", (req, res) => {
-  res.send("server is rauaanning");
-});
+app.get("/", (req, res) => res.send("Express on Vercel v2 test"));
 
-app.listen(5000, console.log("on 5000"));
+app.listen(3001, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
+
+//ygja

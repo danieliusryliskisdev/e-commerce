@@ -10,7 +10,10 @@
     {
       "src": "/(.*)",
       "dest": "server.js"
-    }
-  ],
-  "rewrites": [{ "source": "/(.*)", "dest": "/" }]
+    },
+    { "src": "/login", "dest": "/" },
+    { "src": "/login/phone-verification", "dest": "/" },
+    { "src": "/topics", "dest": "/" },
+    { "src": "/", "dest": "/" }
+  ]
 }
